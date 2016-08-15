@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<title>First Angular Page</title>
+	<script src="bower_components/angular/angular.js" charset="utf-8"></script>
+	<script>
+		var app = angular.module('app',[]);
+		app.controller('divController', function ($scope){
+			$scope.food = [
+				'pizza',
+				'BBQ',
+				'fries',
+				'salad',
+				'steak',
+				'cheeseburger'
+			];
+			$scope.addFood = function(){
+				$scope.food.push($scope.newFood);
+				$scope.newFood = '';
+			}
+		});
+	</script>
+	<style type="text/css">
+		#list{
+			border: solid black 1px;
+			width: 30%;
+			padding: 5px;
+			list-style-type: none;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="divController">
+		<form>
+			Favorite Food:<input type="text" name="add_food" ng-model="newFood">
+			<input type="submit" name="add_food" value="Add Food" ng-click="addFood()">
+		</form>
+			<p ng-bind="newFood"></p>
+			<!-- use bind to copy what is being typed into #add_food -->
+		<ul id="list">
+			<!-- use ng-repeat to loop through our food array and display strings at various indexes -->
+			<li ng-repeat="food in food">{{ food }}</li>
+		</ul> 
+	</div>
+</body>
+</html>
