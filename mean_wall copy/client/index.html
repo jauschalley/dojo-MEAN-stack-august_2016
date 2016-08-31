@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app ="app">
+<head>
+	<title>Discussion Bort!</title>    
+</head>
+	<script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="angular-cookies/angular-cookies.js"></script>
+    <script src="./assets/app.js"></script>
+    <script src="./assets/factories/answerFactory.js"></script>
+    <script src="./assets/factories/commentFactory.js"></script>
+    <script src="./assets/factories/topicFactory.js"></script>
+    <script src="./assets/factories/userFactory.js"></script>
+    <script src="./assets/controllers/dashboardController.js"></script>
+    <script src="./assets/controllers/homeController.js"></script>
+    <script src="./assets/controllers/userController.js"></script>
+    <script src="./assets/controllers/wallController.js"></script>
+<style type="text/css">
+    .dash_form{
+        border: solid black 1px;
+        margin: 3px;
+        padding: 4px;
+    }
+    *{
+        margin-left: 5px;
+    }
+</style>
+<body>
+<div ng-view="">
+</div>
+</body>
+</html>
