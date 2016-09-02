@@ -1,0 +1,8 @@
+<h2>Enter your credentials to login.</h2>
+<form ng-submit="login()">
+	<input type="email" name="email" ng-model="attempt.email" placeholder="email@provider.com">
+	<input type="password" name="password" ng-model="attempt.password">
+	<input type="submit" name="submit" value="Login!">
+</form>
+{{code.message}}<br>
+<a href="#/register">Not a member? Click here to sign up!</a>
